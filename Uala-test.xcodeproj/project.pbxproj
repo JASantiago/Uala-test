@@ -13,6 +13,9 @@
 		6F04EB9425D060400038F317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F04EB9225D060400038F317 /* Main.storyboard */; };
 		6F04EB9625D060410038F317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F04EB9525D060410038F317 /* Assets.xcassets */; };
 		6F04EB9925D060410038F317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F04EB9725D060410038F317 /* LaunchScreen.storyboard */; };
+		6F16A51D25D073D100AD8A07 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A51C25D073D100AD8A07 /* Meal.swift */; };
+		6F16A52225D0784100AD8A07 /* URLMaganer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A52125D0784100AD8A07 /* URLMaganer.swift */; };
+		6F16A52525D0791600AD8A07 /* RecipesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A52425D0791600AD8A07 /* RecipesApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		6F04EB9525D060410038F317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F04EB9825D060410038F317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F04EB9A25D060410038F317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F16A51C25D073D100AD8A07 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		6F16A52125D0784100AD8A07 /* URLMaganer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLMaganer.swift; sourceTree = "<group>"; };
+		6F16A52425D0791600AD8A07 /* RecipesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +62,10 @@
 		6F04EB8B25D060400038F317 /* Uala-test */ = {
 			isa = PBXGroup;
 			children = (
+				6F16A52025D0782800AD8A07 /* Api */,
+				6F16A51F25D0782100AD8A07 /* Utils */,
 				6F16A51125D0727900AD8A07 /* Support */,
-				6F16A51425D0729200AD8A07 /* MainView */,
+				6F16A51425D0729200AD8A07 /* SearchView */,
 				6F04EB9A25D060410038F317 /* Info.plist */,
 			);
 			path = "Uala-test";
@@ -74,13 +82,14 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		6F16A51425D0729200AD8A07 /* MainView */ = {
+		6F16A51425D0729200AD8A07 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
+				6F16A51A25D073A500AD8A07 /* Models */,
 				6F16A51725D072BD00AD8A07 /* Nibs */,
 				6F16A51625D072A900AD8A07 /* Controllers */,
 			);
-			path = MainView;
+			path = SearchView;
 			sourceTree = "<group>";
 		};
 		6F16A51625D072A900AD8A07 /* Controllers */ = {
@@ -97,6 +106,30 @@
 				6F04EB9225D060400038F317 /* Main.storyboard */,
 			);
 			path = Nibs;
+			sourceTree = "<group>";
+		};
+		6F16A51A25D073A500AD8A07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F16A51C25D073D100AD8A07 /* Meal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6F16A51F25D0782100AD8A07 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6F16A52125D0784100AD8A07 /* URLMaganer.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6F16A52025D0782800AD8A07 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				6F16A52425D0791600AD8A07 /* RecipesApi.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +202,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F16A51D25D073D100AD8A07 /* Meal.swift in Sources */,
 				6F04EB9125D060400038F317 /* ViewController.swift in Sources */,
+				6F16A52525D0791600AD8A07 /* RecipesApi.swift in Sources */,
 				6F04EB8D25D060400038F317 /* AppDelegate.swift in Sources */,
+				6F16A52225D0784100AD8A07 /* URLMaganer.swift in Sources */,
 				6F04EB8F25D060400038F317 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
