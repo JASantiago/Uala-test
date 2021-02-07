@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import WebKit
 
 class MealDetailController: UIViewController {
 
     // MARK: - Outlets
 
+    // MARK: - TODO handle StackView Height (and content) programatically
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var intructionsTextView: UITextView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var youtubeWebKit: WKWebView!
     
     // MARK: - Properties
 
@@ -25,6 +28,7 @@ class MealDetailController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         configureUI()
+        configureWebView()
     }
 
     private func configureTableView() {
@@ -38,6 +42,20 @@ class MealDetailController: UIViewController {
         intructionsTextView.text = viewModel?.meal.strInstructions
     }
 
+}
+
+// MARK: - WebKit
+
+extension MealDetailController {
+    func configureWebView() {
+        youtubeWebKit.configuration.allowsInlineMediaPlayback = true
+        DispatchQueue.main.async { [weak self] in
+            guard let videoURL = URL(string: self?.viewModel?.meal.strYoutube ?? "") else { return }
+            let request = URLRequest(url: videoURL)
+            self?.youtubeWebKit.load(request)
+            self?.youtubeWebKit.isHidden = false
+        }
+    }
 }
 
 extension MealDetailController: UITableViewDelegate, UITableViewDataSource {

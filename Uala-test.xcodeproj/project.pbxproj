@@ -29,6 +29,7 @@
 		6F54CC9A25D095C100E131FD /* MealDetailControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F54CC9925D095C100E131FD /* MealDetailControllerViewModel.swift */; };
 		6F54CC9E25D096CF00E131FD /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F54CC9C25D096CF00E131FD /* IngredientCell.swift */; };
 		6F54CC9F25D096CF00E131FD /* IngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F54CC9D25D096CF00E131FD /* IngredientCell.xib */; };
+		6FE5766825D0A48300068F48 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE5766725D0A48300068F48 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		6F54CC9925D095C100E131FD /* MealDetailControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailControllerViewModel.swift; sourceTree = "<group>"; };
 		6F54CC9C25D096CF00E131FD /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
 		6F54CC9D25D096CF00E131FD /* IngredientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientCell.xib; sourceTree = "<group>"; };
+		6FE5766725D0A48300068F48 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FE5766825D0A48300068F48 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,7 @@
 			children = (
 				6F04EB8B25D060400038F317 /* Uala-test */,
 				6F04EB8A25D060400038F317 /* Products */,
+				6FE5766625D0A48300068F48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -289,6 +293,14 @@
 				6F54CC9D25D096CF00E131FD /* IngredientCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		6FE5766625D0A48300068F48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FE5766725D0A48300068F48 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
