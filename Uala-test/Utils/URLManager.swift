@@ -13,4 +13,8 @@ struct URLManager {
     static func searchUrl(for string: String) -> String {
         return "\(baseURL)search.php?s=\(string)"
     }
+
+    static func randomMeal() -> String {
+        return "\(baseURL)random.php"
+    }
 }

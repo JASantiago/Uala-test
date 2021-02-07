@@ -21,24 +21,32 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ayA-nI-EqM">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="539"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Ml-AR-cYg">
+                                <rect key="frame" x="0.0" y="683" width="414" height="179"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3Ml-AR-cYg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Q7-fY-37P"/>
                             <constraint firstItem="ayA-nI-EqM" firstAttribute="top" secondItem="KqD-HM-FAy" secondAttribute="bottom" id="6Cc-bW-SoA"/>
+                            <constraint firstItem="3Ml-AR-cYg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="6fJ-9E-efD"/>
                             <constraint firstItem="KqD-HM-FAy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9g3-l7-5dV"/>
+                            <constraint firstItem="3Ml-AR-cYg" firstAttribute="top" secondItem="ayA-nI-EqM" secondAttribute="bottom" id="Qgz-cB-7N4"/>
                             <constraint firstItem="KqD-HM-FAy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UK1-Tv-A0L"/>
                             <constraint firstItem="ayA-nI-EqM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YnN-9r-DPg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ayA-nI-EqM" secondAttribute="trailing" id="aVu-l6-mlR"/>
                             <constraint firstItem="KqD-HM-FAy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dyi-yv-Eir"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ayA-nI-EqM" secondAttribute="bottom" id="vdM-2j-DN8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Ml-AR-cYg" secondAttribute="bottom" id="vbq-LJ-G5q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Ml-AR-cYg" secondAttribute="trailing" id="yft-dM-jyJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Uala Gourmet" id="R7e-wl-0g8"/>
                     <connections>
+                        <outlet property="mealBannerImageView" destination="3Ml-AR-cYg" id="7Nz-jA-yuW"/>
                         <outlet property="searchBar" destination="KqD-HM-FAy" id="Q0v-5J-GEr"/>
                         <outlet property="tableView" destination="ayA-nI-EqM" id="CKY-GM-CLP"/>
                     </connections>

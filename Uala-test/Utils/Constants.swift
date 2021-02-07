@@ -11,4 +11,8 @@ struct Constants {
     struct ImageNames {
         static let defaultImageName = "generic-meal"
     }
+
+    struct Queues {
+        static let mealsQueue = "fetchRandomMeal"
+    }
 }
