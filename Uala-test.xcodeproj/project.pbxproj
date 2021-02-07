@@ -24,6 +24,11 @@
 		6F539F8B25D081B500826747 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F539F8A25D081B500826747 /* Constants.swift */; };
 		6F539F9025D084F500826747 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F539F8F25D084F500826747 /* TableView+Extension.swift */; };
 		6F539F9525D086FA00826747 /* SearchControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F539F9425D086FA00826747 /* SearchControllerViewModel.swift */; };
+		6F54CC9225D0948D00E131FD /* MealDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F54CC9025D0948D00E131FD /* MealDetailController.swift */; };
+		6F54CC9325D0948D00E131FD /* MealDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F54CC9125D0948D00E131FD /* MealDetailController.xib */; };
+		6F54CC9A25D095C100E131FD /* MealDetailControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F54CC9925D095C100E131FD /* MealDetailControllerViewModel.swift */; };
+		6F54CC9E25D096CF00E131FD /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F54CC9C25D096CF00E131FD /* IngredientCell.swift */; };
+		6F54CC9F25D096CF00E131FD /* IngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F54CC9D25D096CF00E131FD /* IngredientCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +51,11 @@
 		6F539F8A25D081B500826747 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6F539F8F25D084F500826747 /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
 		6F539F9425D086FA00826747 /* SearchControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControllerViewModel.swift; sourceTree = "<group>"; };
+		6F54CC9025D0948D00E131FD /* MealDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailController.swift; sourceTree = "<group>"; };
+		6F54CC9125D0948D00E131FD /* MealDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealDetailController.xib; sourceTree = "<group>"; };
+		6F54CC9925D095C100E131FD /* MealDetailControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailControllerViewModel.swift; sourceTree = "<group>"; };
+		6F54CC9C25D096CF00E131FD /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		6F54CC9D25D096CF00E131FD /* IngredientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +88,10 @@
 		6F04EB8B25D060400038F317 /* Uala-test */ = {
 			isa = PBXGroup;
 			children = (
+				6F54CC8925D0943200E131FD /* Modules */,
 				6F16A52025D0782800AD8A07 /* Api */,
 				6F16A51F25D0782100AD8A07 /* Utils */,
 				6F16A51125D0727900AD8A07 /* Support */,
-				6F16A51425D0729200AD8A07 /* SearchView */,
 				6F04EB9A25D060410038F317 /* Info.plist */,
 			);
 			path = "Uala-test";
@@ -204,6 +214,83 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		6F54CC8925D0943200E131FD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6F54CC8A25D0943900E131FD /* Meals */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6F54CC8A25D0943900E131FD /* Meals */ = {
+			isa = PBXGroup;
+			children = (
+				6F54CC8B25D0944300E131FD /* DetailView */,
+				6F16A51425D0729200AD8A07 /* SearchView */,
+			);
+			path = Meals;
+			sourceTree = "<group>";
+		};
+		6F54CC8B25D0944300E131FD /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				6F54CC8F25D0947100E131FD /* Cells */,
+				6F54CC8E25D0945B00E131FD /* ViewModels */,
+				6F54CC8D25D0945600E131FD /* Nibs */,
+				6F54CC8C25D0945000E131FD /* Controller */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		6F54CC8C25D0945000E131FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6F54CC9025D0948D00E131FD /* MealDetailController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6F54CC8D25D0945600E131FD /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				6F54CCA125D096FE00E131FD /* Cells */,
+				6F54CC9625D0949300E131FD /* Controllers */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		6F54CC8E25D0945B00E131FD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6F54CC9925D095C100E131FD /* MealDetailControllerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6F54CC8F25D0947100E131FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6F54CC9C25D096CF00E131FD /* IngredientCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6F54CC9625D0949300E131FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F54CC9125D0948D00E131FD /* MealDetailController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6F54CCA125D096FE00E131FD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6F54CC9D25D096CF00E131FD /* IngredientCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,8 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F16A52F25D07ECE00AD8A07 /* MealCell.xib in Resources */,
+				6F54CC9325D0948D00E131FD /* MealDetailController.xib in Resources */,
 				6F04EB9925D060410038F317 /* LaunchScreen.storyboard in Resources */,
 				6F04EB9625D060410038F317 /* Assets.xcassets in Resources */,
+				6F54CC9F25D096CF00E131FD /* IngredientCell.xib in Resources */,
 				6F04EB9425D060400038F317 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,11 +366,14 @@
 			files = (
 				6F539F9525D086FA00826747 /* SearchControllerViewModel.swift in Sources */,
 				6F16A51D25D073D100AD8A07 /* Meal.swift in Sources */,
+				6F54CC9A25D095C100E131FD /* MealDetailControllerViewModel.swift in Sources */,
 				6F539F8B25D081B500826747 /* Constants.swift in Sources */,
 				6F04EB9125D060400038F317 /* ViewController.swift in Sources */,
 				6F539F8825D0819500826747 /* ImageCacheManager.swift in Sources */,
 				6F16A52525D0791600AD8A07 /* RecipesApi.swift in Sources */,
 				6F16A53625D07F7900AD8A07 /* NibLoadableView.swift in Sources */,
+				6F54CC9E25D096CF00E131FD /* IngredientCell.swift in Sources */,
+				6F54CC9225D0948D00E131FD /* MealDetailController.swift in Sources */,
 				6F16A53325D07F1200AD8A07 /* ReusableView.swift in Sources */,
 				6F539F9025D084F500826747 /* TableView+Extension.swift in Sources */,
 				6F16A52E25D07ECE00AD8A07 /* MealCell.swift in Sources */,
