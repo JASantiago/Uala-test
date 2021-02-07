@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         configureViewModel()
+        searchBar.delegate = self
     }
 
     private func configureTableView() {
@@ -55,5 +56,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(for: indexPath) as MealCell
         cell.configure(meal: viewModel.meals[indexPath.row])
         return cell
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.fetchMeals(searchString: searchText)
     }
 }

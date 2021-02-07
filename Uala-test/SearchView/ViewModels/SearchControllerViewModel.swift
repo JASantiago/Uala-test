@@ -14,15 +14,20 @@ class SearchControllerViewModel {
     var didFinishedFetchingMeals: (() -> Void)?
     var recipesApiHelper = RecipesApi()
     var meals = [Meal]()
+    var dispatchQueue = DispatchQueue(label: "com.mealsservice", qos: .userInitiated)
 
     // MARK: - Methods
 
+    // MARK: - TODO: Change the serial queue for cancellable operations
+
     func fetchMeals(searchString: String) {
-        recipesApiHelper.getRecipes(url: URLManager.searchUrl(for: searchString) ) { [weak self] (meals) in
-            guard let self = self,
-                  let meals = meals else { return }
-            self.meals = meals
-            self.didFinishedFetchingMeals?()
+        dispatchQueue.sync { [weak self] in
+            guard let self = self else { return }
+            self.recipesApiHelper.getRecipes(url: URLManager.searchUrl(for: searchString) ) {  (meals) in
+                guard let meals = meals else { return }
+                self.meals = meals
+                self.didFinishedFetchingMeals?()
+            }
         }
     }
 }
