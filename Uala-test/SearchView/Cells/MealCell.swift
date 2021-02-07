@@ -20,7 +20,7 @@ class MealCell: UITableViewCell, ReusableView, NibLoadableView {
     func configure(meal: Meal) {
         titleLabel.text = meal.strMeal
         categoryLabel.text = meal.strCategory
-        UIImageView().getImageFromCache(urlString: meal.strMealThumb) { [weak self] (image: UIImage?) in
+        UIImageView().getImageFromCache(urlString: meal.strMealThumb ?? "") { [weak self] (image: UIImage?) in
             DispatchQueue.main.async {
                 self?.mealImageView.image = image
             }

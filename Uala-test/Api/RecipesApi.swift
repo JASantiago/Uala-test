@@ -27,8 +27,12 @@ class RecipesApi {
                 completion(nil)
                 return
             }
-            let meals = try? JSONDecoder().decode([Meal].self, from: data)
-            completion(meals)
+            if let mealsData = try? JSONDecoder().decode(MealsData.self, from: data) {
+                completion(mealsData.meals)
+            } else {
+                completion(nil)
+                return
+            }
         })
         task.resume()
     }
