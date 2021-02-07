@@ -26,4 +26,8 @@ class MealCell: UITableViewCell, ReusableView, NibLoadableView {
             }
         }
     }
+
+    override func prepareForReuse() {
+        mealImageView.image = UIImage(named: Constants.ImageNames.defaultImageName)
+    }
 }
