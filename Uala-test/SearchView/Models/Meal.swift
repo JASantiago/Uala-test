@@ -6,16 +6,21 @@
 //
 
 import Foundation
+
+struct MealsData : Codable {
+    let meals : [Meal]?
+}
+
 struct Meal : Codable {
-    let idMeal : String
-    let strMeal : String
+    let idMeal : String?
+    let strMeal : String?
     let strDrinkAlternate : String?
-    let strCategory : String
-    let strArea : String
-    let strInstructions : String
-    let strMealThumb : String
-    let strTags : String
-    let strYoutube : String
+    let strCategory : String?
+    let strArea : String?
+    let strInstructions : String?
+    let strMealThumb : String?
+    let strTags : String?
+    let strYoutube : String?
     var ingredients : [String] = []
     var mesures : [String] = []
     let strIngredient1 : String?
@@ -118,15 +123,15 @@ struct Meal : Codable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        idMeal = try values.decode(String.self, forKey: .idMeal)
-        strMeal = try values.decode(String.self, forKey: .strMeal)
+        idMeal = try values.decodeIfPresent(String.self, forKey: .idMeal)
+        strMeal = try values.decodeIfPresent(String.self, forKey: .strMeal)
         strDrinkAlternate = try values.decodeIfPresent(String.self, forKey: .strDrinkAlternate)
-        strCategory = try values.decode(String.self, forKey: .strCategory)
-        strArea = try values.decode(String.self, forKey: .strArea)
-        strInstructions = try values.decode(String.self, forKey: .strInstructions)
-        strMealThumb = try values.decode(String.self, forKey: .strMealThumb)
-        strTags = try values.decode(String.self, forKey: .strTags)
-        strYoutube = try values.decode(String.self, forKey: .strYoutube)
+        strCategory = try values.decodeIfPresent(String.self, forKey: .strCategory)
+        strArea = try values.decodeIfPresent(String.self, forKey: .strArea)
+        strInstructions = try values.decodeIfPresent(String.self, forKey: .strInstructions)
+        strMealThumb = try values.decodeIfPresent(String.self, forKey: .strMealThumb)
+        strTags = try values.decodeIfPresent(String.self, forKey: .strTags)
+        strYoutube = try values.decodeIfPresent(String.self, forKey: .strYoutube)
         strIngredient1 = try values.decodeIfPresent(String.self, forKey: .strIngredient1)
         if let ingredient = strIngredient1 { ingredients.append(ingredient) }
         strIngredient2 = try values.decodeIfPresent(String.self, forKey: .strIngredient2)
