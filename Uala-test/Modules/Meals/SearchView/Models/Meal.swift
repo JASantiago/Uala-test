@@ -214,6 +214,11 @@ struct Meal : Codable {
         if let measure = strMeasure20 { mesures.append(measure) }
         strSource = try values.decodeIfPresent(String.self, forKey: .strSource)
         dateModified = try values.decodeIfPresent(String.self, forKey: .dateModified)
+
+        ingredients = ingredients.compactMap({ ingredient in
+            if ingredient.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty { return nil }
+            else { return ingredient }
+        })
     }
 
 }

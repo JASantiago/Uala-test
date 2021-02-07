@@ -57,6 +57,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(meal: viewModel.meals[indexPath.row])
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = MealDetailController(nibName: String(describing: MealDetailController.self), bundle: nil)
+        controller.viewModel = MealDetailControllerViewModel(meal: viewModel.meals[indexPath.row])
+        navigationController?.show(controller, sender: nil)
+    }
 }
 
 extension ViewController: UISearchBarDelegate {
