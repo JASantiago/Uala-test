@@ -56,15 +56,47 @@
 		6F04EB8B25D060400038F317 /* Uala-test */ = {
 			isa = PBXGroup;
 			children = (
-				6F04EB8C25D060400038F317 /* AppDelegate.swift */,
-				6F04EB8E25D060400038F317 /* SceneDelegate.swift */,
-				6F04EB9025D060400038F317 /* ViewController.swift */,
-				6F04EB9225D060400038F317 /* Main.storyboard */,
-				6F04EB9525D060410038F317 /* Assets.xcassets */,
-				6F04EB9725D060410038F317 /* LaunchScreen.storyboard */,
+				6F16A51125D0727900AD8A07 /* Support */,
+				6F16A51425D0729200AD8A07 /* MainView */,
 				6F04EB9A25D060410038F317 /* Info.plist */,
 			);
 			path = "Uala-test";
+			sourceTree = "<group>";
+		};
+		6F16A51125D0727900AD8A07 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				6F04EB9725D060410038F317 /* LaunchScreen.storyboard */,
+				6F04EB9525D060410038F317 /* Assets.xcassets */,
+				6F04EB8C25D060400038F317 /* AppDelegate.swift */,
+				6F04EB8E25D060400038F317 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		6F16A51425D0729200AD8A07 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				6F16A51725D072BD00AD8A07 /* Nibs */,
+				6F16A51625D072A900AD8A07 /* Controllers */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		6F16A51625D072A900AD8A07 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F04EB9025D060400038F317 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6F16A51725D072BD00AD8A07 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				6F04EB9225D060400038F317 /* Main.storyboard */,
+			);
+			path = Nibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
