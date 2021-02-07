@@ -13,7 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var mealBannerImageView: UIImageView!
+    
     // MARK: - Properties
 
     var viewModel = SearchControllerViewModel()
@@ -40,7 +41,17 @@ class ViewController: UIViewController {
             }
         }
 
+        viewModel.didFinishedImageBanner = { [weak self] in
+            DispatchQueue.main.async {
+                UIImageView().getImageFromCache(urlString: self?.viewModel.randomMeal?.strMealThumb ?? "") { (image: UIImage?) in
+                        self?.mealBannerImageView.image = image
+                }
+                self?.mealBannerImageView.isHidden = false
+            }
+        }
+
         viewModel.fetchMeals(searchString: String())
+        viewModel.fetchRandomMeal()
     }
 
 }
